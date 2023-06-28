@@ -91,4 +91,10 @@ navLinks.forEach(navLink => {
     if(navLinks[3].baseURI.includes('products')) {
         navLinks[3].classList.add('active')
     }
+    if(navLinks[2].baseURI.includes('works')) {
+        navLinks[2].classList.add('active')
+    }
+    if(navLinks[5].baseURI.includes('blog')) {
+        navLinks[5].classList.add('active')
+    }
 })
