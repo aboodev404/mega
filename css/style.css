@@ -922,7 +922,8 @@ footer .bottom {
     color: #fff;
 }
 .form-booking input,
-.form-booking textarea {
+.form-booking textarea,
+.booking-page select {
     display: block;
     width: 100%;
     outline: none;
@@ -1351,6 +1352,9 @@ footer .bottom {
 .content-area .swiper-button-prev:after {
     font-size: 19px;
 }
+.booking-page .two {
+    display: none;
+}
 @media screen and (max-width: 1140px) {
     .blog-content .container {
         flex-direction: column-reverse;
@@ -1370,5 +1374,96 @@ footer .bottom {
     }
     .side-content input[type='email'] {
         width: 60%;
+    }
+}
+
+
+
+
+.tabs-booking {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    font-size: 19px;
+    padding-bottom: 10px;
+}
+.tabs-booking li {
+    cursor: pointer;
+}
+.tabs-booking li.active {
+    background: linear-gradient(129deg, #FF0065 0%, #179AD7 100%);
+    padding: 1px 35px;
+    border-radius: 10px;
+    color: #fff;
+}
+.booking-page form {
+    width: 50%;
+}
+.booking-page .form-booking {
+    height: auto;
+}
+.booking-page .tabs-booking {
+    width: 50%;
+}
+.booking-page .tabs-booking li {
+    width: 50%;
+    text-align: center;
+}
+.select-location {
+    position: relative;
+}
+.booking-page .form-booking input, 
+.booking-page .form-booking textarea, 
+.booking-page select {
+    width: 100%;
+}
+.booking-page input[type='submit'] {
+    border-radius: 60px;
+    background: var(--menu, linear-gradient(129deg, #FF0065 0%, #179AD7 100%));
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.select-location input {
+    width: 100% !important;
+}
+.btn-sel-loc {
+    border-radius: 6px;
+    color: #fff;
+    background: #142030;
+    padding: 1px 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+@media screen and (max-width: 786px) {
+    .booking-page .form-booking input, 
+    .booking-page .form-booking textarea {
+        width: 100%;
+    }
+    .booking-page form,
+    .booking-page .tabs-booking {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .booking-page .btn-sel-loc {
+        padding: 1px 8px;
+        left: 5px;
+        font-size: 14px;
+    }
+    .booking-page .tabs-booking li {
+        cursor: pointer;
+        width: 50%;
+        text-align: center;
+    }
+    .booking-page form,
+    .booking-page .form-booking input,
+    .booking-page .form-booking textarea,
+    .booking-page .tabs-booking  {
+        width: 100% !important;
     }
 }
