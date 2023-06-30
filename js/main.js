@@ -43,6 +43,7 @@ let scrollUp = document.querySelector('.btn-top');
 window.onscroll = function() {
     this.scrollY >= 800? scrollUp.classList.add('show'): scrollUp.classList.remove('show');
     // window.addEventListener('scroll', counter)
+    window.addEventListener('scroll', sticky)
     if(window.location.pathname === '/' || window.location.pathname.includes('index')) {
         window.addEventListener('scroll', counter)
     }
@@ -54,6 +55,15 @@ scrollUp.onclick = function() {
     });
 };
 
+const navbar = document.querySelector('.nav-bar')
+
+function sticky() {
+    if(window.pageYOffset >= navbar.offsetTop) {
+        navbar.classList.add('sticky')
+    } else {
+        navbar.classList.remove('sticky')
+    }
+}
 // Change Language
 const menuLang = document.querySelector('.menu-lang')
 
@@ -77,10 +87,6 @@ const navLinks = document.querySelectorAll('.nav__link')
 const windowPathname = window.location.pathname
 navLinks.forEach(navLink => {
     const navLinkPathname = new URL(navLink.href).pathname
-
-    console.log(windowPathname)
-    // console.log(navLinkPathname)
-    console.log(navLink.href)
 
     if((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
         navLink.classList.add('active')

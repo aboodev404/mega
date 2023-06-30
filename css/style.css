@@ -78,6 +78,10 @@ a {
     justify-content: space-between;
     padding: 5px 30px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
 }
 .h-top .left {
     display: flex;
@@ -217,11 +221,6 @@ a {
     z-index: 9;
 }
 @media screen and (max-width: 930px) {
-    .h-top {
-        position: relative;
-        z-index: 90999999999;
-        background-color: #fff;
-    }
     .header .nav-bar .bg-logo {
         display: none;
     }
@@ -256,7 +255,7 @@ a {
     .header .nav-bar {
         width: auto;
         margin: 0 10px;
-        justify-content: space-between;
+        justify-content: space-between !important;
     }
     .header .nav-bar .btn-bar {
         display: block;
@@ -282,7 +281,7 @@ a {
         width: 100%;
         height: 100vh;
         background: #152031;
-        top: 0;
+        top: 11px;
         right: 0;
         z-index: 2;
         flex-direction: column;
@@ -338,6 +337,16 @@ a {
     .h-top .left {
         display: none;
     }
+}
+
+.nav-bar.sticky {
+    position: fixed;
+    top: 45px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    justify-content: center;
+    z-index: 100;
 }
 /*---------------- End Header ----------------*/
 
@@ -707,6 +716,12 @@ footer .bottom {
     .left .weather {
         display: none;
     }
+    .nav-bar.sticky {
+        top: 40px;
+    }
+    .header .nav-bar nav.active .navbar {
+        top: 0;
+    }
     .nav-bar .weather.active {
         display: flex;
         z-index: 99;
@@ -925,7 +940,6 @@ footer .bottom {
 .form-booking textarea,
 .booking-page select {
     display: block;
-    width: 100%;
     outline: none;
     border: none;
     padding: 8px 10px;
@@ -1200,7 +1214,7 @@ footer .bottom {
 .side {
     flex: 35% 0;
     position: sticky;
-    top: 0;
+    top: 150px;
     padding-top: 50px;
     height: max-content;
 }
@@ -1465,5 +1479,147 @@ footer .bottom {
     .booking-page .form-booking textarea,
     .booking-page .tabs-booking  {
         width: 100% !important;
+    }
+}
+
+
+
+/* Content US Page */
+.type-contact {
+    background-color: #f5f5f5;
+}
+.content {
+    background-color: #fff;
+    padding-bottom: 30px;
+}
+.cont-box {
+    width: 381px;
+    height: 324px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(20, 32, 48, 0.50);
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+.cont-box .img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(129deg, rgba(255, 0, 101, 0.50) 0%, rgba(23, 154, 215, 0.50) 100%);
+    position: relative;
+}
+.cont-box .img img {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cont-box a {
+    color: #000;
+    font-size: 19px;
+    font-weight: 600;
+}
+.cont-box .tit {
+    font-size: 21px;
+    font-weight: 600;
+}
+.type {
+    width: 282px;
+    height: 239px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid rgba(20, 32, 48, 0.50);
+    background: #FFF;
+}
+.type.active {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, rgba(255, 0, 101, 1), rgba(23, 154, 215, 1)) border-box !important;
+}
+.form-contact {
+    margin-top: 30px;
+}
+.type-contact .row {
+    display: flex;
+    gap: 20px;
+}
+.type-contact .row .col-1 {
+    flex: 50% 0;
+}
+.type-contact .row .col-1 label {
+    display: block;
+}
+textarea {
+    resize: none;
+}
+.type-contact .row .col-1 input,
+.type-contact .row .col-1 textarea {
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 1px solid rgba(21, 32, 49, 0.30);
+    border-radius: 10px;
+    margin-top: 7px;
+    font-family: 'Cairo';
+}
+.type-contact input[type='submit'] {
+    border-radius: 10px;
+    background: #152031;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 25%;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: cairo;
+}
+@media screen and (max-width: 786px) {
+    .type-contact .row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .type-contact input[type='submit'] {
+        width: 50% !important;
+    }
+}
+@media screen and (max-width: 520px) {
+    .cont-box {
+        width: 275px;
+        height: 234px;
+    }
+    .type {
+        width: 165px;
+        height: 142px;
+    }
+    .type-contact .row {
+        gap: 0;
+    }
+    .type-contact input[type='submit'] {
+        width: 100% !important;
+    }
+    .type-contact label {
+        display: none !important;
+    }
+    .tab-content .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form-contact {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
