@@ -77,3 +77,7 @@ footer .top .container .subscribe input[type='submit'] {
     content: 'Previous Blog';
     left: 45px;
 }
+
+.header .nav-bar nav ul .submenu li:hover a {
+    padding-left: 10px;
+}
