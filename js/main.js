@@ -82,6 +82,22 @@ function startCount(el) {
     }, 0.0000000000000000000000001 / goal)
 }
 
+
+// type
+const types = document.querySelectorAll('.type')
+const typesArray = Array.from(types)
+
+types.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        el.classList.remove('active')
+        types.forEach((el) => {
+            el.classList.remove('active')
+        })
+        e.currentTarget.classList.add('active')
+    })
+
+})
+
 // Indactor
 const navLinks = document.querySelectorAll('.nav__link')
 const windowPathname = window.location.pathname

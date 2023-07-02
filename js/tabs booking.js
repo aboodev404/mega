@@ -16,6 +16,4 @@ tabsArray.forEach((el) => {
         // console.log(e.currentTarget.dataset.cont)
         document.querySelector(e.currentTarget.dataset.cont).style.display = 'block'
     })
-    
-    
 })

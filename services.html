@@ -173,10 +173,12 @@
 
     <!-- Video -->
     <div class="container">
-        <iframe class="video" width="898" height="506" src="https://www.youtube.com/embed/dwqwLSToyJA"
-            title="4 - سورة النساء ١٤٤٢ هـ | أحمد النفيس" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+        <div class="text">
+            <h1 class="title">فيديو الخدمة</h1>
+        </div>
+        <video width="100%" height="max-content" controls>
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
     </div>
 
     <!---------------- Start Booking ---------------->
@@ -190,7 +192,7 @@
                     <input type="email" placeholder="البريد الالكتروني" name="email" required>
                     <input type="text" placeholder="عنوان الرسالة" name="title-msg" required>
                     <textarea name="content-msg" cols="30" rows="6" placeholder="نص الرسالة" required></textarea>
-                    <input type="submit" name="send" value="إرسال">
+                    <input type="submit" name="send" value="حجز">
                 </form>
                 </form>
             </div>
@@ -270,10 +272,10 @@
                         <img src="images/Email.svg" alt="Email">
                     </div>
                     <div class="sci">
-                        <a href="#"><img src="images/Facebook.svg" alt="Facebook"></a>
-                        <a href="#"><img src="images/Instagram.svg" alt="Instagram"></a>
-                        <a href="#"><img src="images/Twitter.svg" alt="Twitter"></a>
-                        <a href="#"><img src="images/Snapchat.svg" alt="Snapchat"></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
                     </div>
                     <div class="numbers">
                         <p>الرقم الضريبي: <a href="tel: 1234456789744646">1234456789744646</a></p>
@@ -311,6 +313,10 @@
             spaceBetween: 30,
             pagination: {
                 clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
             },
             breakpoints: {
                 220: {
