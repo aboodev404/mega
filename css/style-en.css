@@ -81,3 +81,7 @@ footer .top .container .subscribe input[type='submit'] {
 .header .nav-bar nav ul .submenu li:hover a {
     padding-left: 10px;
 }
+
+.policy ul {
+    padding-left: 20px;
+}

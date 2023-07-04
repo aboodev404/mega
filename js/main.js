@@ -42,7 +42,6 @@ let scrollUp = document.querySelector('.btn-top');
 
 window.onscroll = function() {
     this.scrollY >= 800? scrollUp.classList.add('show'): scrollUp.classList.remove('show');
-    // window.addEventListener('scroll', counter)
     window.addEventListener('scroll', sticky)
     if(window.location.pathname === '/' || window.location.pathname.includes('index')) {
         window.addEventListener('scroll', counter)

@@ -1771,3 +1771,44 @@ textarea {
         padding-right: 20px;
     }
 }
+
+
+
+/* Policy Page */
+.policy {
+    font-size: 21px;
+    background-color: #FCFCFC !important;
+}
+.policy .container {
+    padding-top: 0;
+    position: relative;
+    top: -50px;
+}
+.content-policy {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(117deg, rgba(255, 0, 101, 1), rgba(23, 154, 215, 1)) border-box !important;
+    color: #152031;
+    box-shadow: 0px 0 35px 0px rgba(7, 0, 59, 0.06);
+}
+.content-policy h1 {
+    background: linear-gradient(102.6deg, #FF0065 -7.7%, #179AD7 110.07%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+}
+.policy ul {
+    font-size: 19px;
+    list-style-type: square;
+    padding-right: 20px;
+}
+.policy ul li p.title {
+    font-size: 21px;
+    font-weight: 700;
+}
+.policy ul li {
+    padding-bottom: 20px;
+}
